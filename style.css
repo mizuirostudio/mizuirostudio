@@ -23,6 +23,7 @@ html {
 body {
   font-size: 1.2rem;
   color: var(--text-color);
+  background-color: var(--bg-color);
   line-height: 1.7;
   font-family: "Marcellus", "dnp-shuei-gothic-gin-std", sans-serif;
   font-weight: 400;
@@ -62,23 +63,34 @@ li {
 }
 
 /* ヘッダー */
-header {
-  display: none;
-  align-items: center;
-  justify-content: space-between;
+.header-top {
+  background-color: transparent;
   position: fixed;
-  background-color: var(--bg-color);
   width: 100%;
-  height: 48px;
   top: 0;
   z-index: 1;
+}
+
+.header-page {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/mizuirostudio-image.jpg);
+  background-position: center center;
+  background-size: cover;
+
+  h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+  }
 }
 
 .logo-bg {
   width: 48px;
   height: 48px;
   position: relative;
-  background-color: var(--main-color);
 
   @media(hover: hover) {
     &:hover {
@@ -103,64 +115,7 @@ header {
   height: auto;
 }
 
-.header-logo {
-    transform: rotate(-90deg);
-}
-
-.menu-btn {
-  position: relative;
-  margin-bottom: 0;
-  width: 48px;
-  height: 48px;
-  background-color: var(--main-color);
-
-  @media(hover: hover) {
-    &:hover {
-      opacity: 0.5;
-      transition: 0.3s;
-    }
-  }
-  @media(hover: none) {
-    &:active {
-      opacity: 0.5;
-      transition: 0.3s;
-    }
-  }
-}
-
-.menu-btn span {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  display: block;
-  height: 2px;
-  width: 24px;
-  left: 12px;
-  background-color: #fff;
-  transform: rotate(0);
-  transition: all 0.3s;
-}
-
-.menu-btn span:nth-of-type(1) {
-  top: 14px;
-}
-.menu-btn span:nth-of-type(2) {
-  top: 23px;
-}
-.menu-btn span:nth-of-type(3) {
-  top: 32px;
-}
-
-.menu-btn.open span:nth-of-type(1) {
-  transform: translateY(9px) rotate(-45deg);
-}
-.menu-btn.open span:nth-of-type(2) {
-  opacity: 0;
-}
-.menu-btn.open span:nth-of-type(3) {
-  transform: translateY(-9px) rotate(45deg);
-}
-
+/* トップページ */
 .split-left {
   height: 100svh;
   width: 100svw;
@@ -238,6 +193,7 @@ header {
     width: 60px;
     height: 100%;
     margin-left: 60%;
+    background-color: #fff;
     position: fixed;
 
     span {
@@ -256,9 +212,7 @@ header {
   }
 }
 
-/* トップページ */
 #top {
-  background-color: var(--bg-color);
   background-image: url(images/logo-white.svg);
   background-size: 60%;
   background-position: top right;
@@ -328,6 +282,7 @@ header {
 /* ワークス */
 #works {
   text-align: center;
+  background-color: #fff;
 
   h2 {
     font-size: 4.8rem;
@@ -373,9 +328,10 @@ header {
 .footer-nav-links {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 8px;
+  padding-bottom: 8px;
   font-size: 1.2rem;
   font-weight: 500;
+  background-color: #fff;
 }
 
 .footer-nav-item {
