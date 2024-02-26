@@ -96,7 +96,7 @@
             <span>架空の飲食店「旬彩こかげ」のホームページ</span>
           </figcaption>
         </figure>
-        <button type="button" onclick="location.href='#'" class="btn-color">サイトを見る</button>
+        <button type="button" onclick="location.href='https://portfolio01.mizuirostudio.com/'" class="btn-color">サイトを見る</button>
       </section>
 
       <section id="contact">
@@ -124,7 +124,7 @@
   <footer>
     <ul class="footer-nav-links">
       <li class="footer-nav-item"><a href="index.html">&copy; みずいろスタジオ</a></li>
-      <li class="footer-nav-item"><a href="privacy-policy.html">プライバシーポリシー</a></li>
+      <li class="footer-nav-item"><a href="privacy-policy.php">プライバシーポリシー</a></li>
     </ul>
   </footer>
 
