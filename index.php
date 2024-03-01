@@ -95,16 +95,20 @@
         </p>
         <ol class="pr-points">
           <li class="pr-point">
-            <div class="pr-icon icon-sp"></div>様々なデバイスに対応するレスポンシブデザイン
+            <div class="pr-icon icon-sp"></div>
+            <span>様々なデバイスに対応するレスポンシブデザイン</span>
           </li>
           <li class="pr-point">
-            <div class="pr-icon icon-film"></div>サイトの印象を高めるCSS・Javascriptアニメーション
+            <div class="pr-icon icon-film"></div>
+            <span>サイトの印象を高めるCSS・Javascriptアニメーション</span>
           </li>
           <li class="pr-point">
-            <div class="pr-icon icon-code"></div>アクセシビリティに配慮したセマンティックマークアップ
+            <div class="pr-icon icon-code"></div>
+            <span>アクセシビリティに配慮したセマンティックマークアップ</span>
           </li>
           <li class="pr-point">
-            <div class="pr-icon icon-pen"></div>Wordpress等のCMSを導入した更新しやすいサイト
+            <div class="pr-icon icon-pen"></div>
+            <span>Wordpress等のCMSを導入した更新しやすいサイト</span>
           </li>
         </ol>
       </section>
@@ -122,7 +126,7 @@
 
       <section id="contact">
         <h2>Contact</h2>
-        <p>お問い合わせ、ご依頼承ります。</p>
+        <p>お問い合わせ、ご依頼承ります</p>
         <form method="post" action="confirm.php">
           <label for="message">お問い合わせ内容</label>
           <div class="inputfield">

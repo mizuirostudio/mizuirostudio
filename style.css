@@ -274,6 +274,10 @@ li {
         top: 16px;
       }     
     }
+
+    span {
+      margin-top: 8px;
+    }
   }
 
   .pr-icon {
@@ -412,7 +416,6 @@ li {
   .btn-color {
     margin-top: 16px;
   }
-
 }
 
 
