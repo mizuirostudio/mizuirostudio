@@ -2,15 +2,30 @@
 <html lang="ja">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-595HDP3M');
+  </script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>みずいろスタジオ</title>
   <meta name="description" content="東京のWeb制作事務所、みずいろスタジオのホームページです。Webデザイン、コーディング、マーケティングにご協力いたします。">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
   <script>
     (function(d) {
       var config = {
@@ -46,46 +61,52 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-595HDP3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="header-top">
     <h1 class="logo-bg">
       <a href="index.php">
         <img src="images/logo-white.svg" class="logo-white" alt="みずいろスタジオ ホームへ">
       </a>
     </h1>
+    <nav class="header-nav">
+      <ul class="header-nav-links">
+        <li class="header-nav-item"><a href="#about">About</a></li>
+        <li class="header-nav-item"><a href="#works">Works</a></li>
+        <!-- <li class="header-nav-item"><a href="#blog">Blog</a></li> -->
+        <li class="header-nav-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <div class="split-left">
-      <div class="top-image">
-        <nav class="header-nav">
-          <ul class="header-nav-links">
-            <li class="header-nav-item"><a href="index.html">Top</a></li>
-            <li class="header-nav-item"><a href="#works">Works</a></li>
-            <!-- <li class="header-nav-item"><a href="#blog">Blog</a></li> -->
-            <li class="header-nav-item"><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+    <div class="top-image">
+      <div class="catchcopy">
         <span>みずいろスタジオへようこそ</span>
         <span>Webデザイン承ります</span>
       </div>
     </div>
-
-    <div class="split-center">
-      <span>Welcome to Mizuirostudio</span>
-    </div>
-
-    <div class="split-right">
-      <section id="top">
+    <div class="wrapper top-wrapper">
+      <section id="about">
         <h2>みずいろスタジオとは</h2>
         <p>
           東京で活動する個人のWeb制作事務所です。デザインからコーディングまで、Webサイト制作を支援しています。お客様の目的を達成する上で何が必要かを考えながら、ユーザーにとっても快適なサイトを形にしていきます。
         </p>
-        <ul class="pr-points">
-          <li class="pr-point">様々なデバイスに対応するレスポンシブデザイン</li>
-          <li class="pr-point">サイトの印象をアップするCSS・JSアニメーション</li>
-          <li class="pr-point">アクセシビリティに配慮したセマンティックコーディング</li>
-          <li class="pr-point">素早いレスポンスと対応</li>
-        </ul>
+        <ol class="pr-points">
+          <li class="pr-point">
+            <div class="pr-icon icon-sp"></div>様々なデバイスに対応するレスポンシブデザイン
+          </li>
+          <li class="pr-point">
+            <div class="pr-icon icon-film"></div>サイトの印象を高めるCSS・Javascriptアニメーション
+          </li>
+          <li class="pr-point">
+            <div class="pr-icon icon-code"></div>アクセシビリティに配慮したセマンティックマークアップ
+          </li>
+          <li class="pr-point">
+            <div class="pr-icon icon-pen"></div>Wordpress等のCMSを導入した更新しやすいサイト
+          </li>
+        </ol>
       </section>
 
       <section id="works">
@@ -105,15 +126,15 @@
         <form method="post" action="confirm.php">
           <label for="message">お問い合わせ内容</label>
           <div class="inputfield">
-            <textarea name="message" id="message" required></textarea>
+            <textarea name="message" id="message" placeholder="例）インターネットから集客できるよう、更新しやすいホームページを開設したい" required></textarea>
           </div>
           <label for="username">お名前（ハンドルネーム可）</label>
           <div class="inputfield">
-            <input type="text" name="username" id="username" required>
+            <input type="text" name="username" id="username" placeholder="例）みずいろ" required>
           </div>
           <label for="email">メールアドレス</label>
           <div class="inputfield">
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" placeholder="例）○○○@gmail.com" required>
           </div>
           <button type="submit" name="submit" value="確認" class="btn-color">お問い合わせ内容を確認する</button>
         </form>
@@ -123,23 +144,10 @@
 
   <footer>
     <ul class="footer-nav-links">
-      <li class="footer-nav-item"><a href="index.html">&copy; みずいろスタジオ</a></li>
+      <li class="footer-nav-item"><a href="index.php">&copy; みずいろスタジオ</a></li>
       <li class="footer-nav-item"><a href="privacy-policy.php">プライバシーポリシー</a></li>
     </ul>
   </footer>
-
-  <script>
-    jQuery(function($) {
-      $('.menu-btn').on('click', function() {
-        $('.header-nav ul, .menu-btn').toggleClass('open');
-      });
-
-      $('.header-nav-item a').on('click', function() {
-        $('.header-nav ul, .menu-btn').removeClass('open');
-      });
-    });
-  </script>
-
 </body>
 
 </html>

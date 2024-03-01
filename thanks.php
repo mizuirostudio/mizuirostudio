@@ -21,15 +21,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-595HDP3M');
+  </script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>みずいろスタジオ</title>
   <meta name="description" content="東京のWeb制作事務所、みずいろスタジオのホームページです。Webデザイン、コーディング、マーケティングにご協力いたします。">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
   <script>
     (function(d) {
       var config = {
@@ -65,15 +80,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-595HDP3M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="header-page">
     <div class="logo-bg">
       <a href="index.php">
         <img src="images/logo-white.svg" class="logo-white" alt="みずいろスタジオ ホームへ">
       </a>
     </div>
-    <h1>お問い合わせフォーム - 完了画面</h1>
+    <h1>お問い合わせ完了</h1>
   </header>
-  <p>お問い合わせありがとうございます。<br>1営業日中に確認し、ご返信いたします。</p>
+  <div class="wrapper page-wrapper">
+    <section id="thanks">
+    <h2>お問い合わせありがとうございます。</h2>
+    <p>1営業日中に確認し、ご返信いたします。</p>
+    <button type="button" onclick="location.href='index.php'" class="btn-color">トップに戻る</button>
+    </section>
+  </div>
+  <footer>
+    <ul class="footer-nav-links">
+      <li class="footer-nav-item"><a href="index.php">&copy; みずいろスタジオ</a></li>
+      <li class="footer-nav-item"><a href="privacy-policy.php">プライバシーポリシー</a></li>
+    </ul>
+  </footer>
+
 </body>
 
 </html>

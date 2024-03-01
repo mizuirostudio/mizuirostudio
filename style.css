@@ -14,32 +14,35 @@ html {
 }
 
 :root {
-  --main-color: #2a7a8c;
-  --text-color: #1e3137;
-  --bg-color: #d9e9ed;
-  --red: #b31331;
+  --main-color: #669396;
+  --text-color: #393939;
+  --bg-color: #f1f3e5;
+  --more-color: #577d80;
 }
 
 body {
   font-size: 1.2rem;
   color: var(--text-color);
-  background-color: var(--bg-color);
+  background-color: #fff;
   line-height: 1.7;
-  font-family: "Marcellus", "dnp-shuei-gothic-gin-std", sans-serif;
+  font-family: "classico-urw", "dnp-shuei-gothic-gin-std", sans-serif;
   font-weight: 400;
   width: 100%;
+  height: 100svh;
   overflow-x: clip;
 }
 
-#top, #works, #blog, #contact {
+section {
+  width: 95%;
+  max-width: 700px;
   padding: 4.8rem 2.4rem;
 }
 
 h2 {
-  color: var(--main-color);
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   margin-top: 16px;
+  color: var(--more-color);
 }
 
 a {
@@ -54,17 +57,16 @@ li {
 .btn-color {
   color: #fff;
   font-size: 1.2rem;
-  background-color: var(--red);
+  background-color: var(--more-color);
   padding: 4px 14px;
   height: 3.2rem;
   width: fit-content;
   border-radius: 1.6rem;
-  margin-top: 16px;
 }
 
 /* ヘッダー */
 .header-top {
-  background-color: transparent;
+  background: linear-gradient(rgba(102, 147, 150, 0.3), rgba(102, 147, 150, 0));
   position: fixed;
   width: 100%;
   top: 0;
@@ -73,10 +75,11 @@ li {
 
 .header-page {
   width: 100%;
+  height: 120px;
   display: grid;
   place-items: center;
   gap: 8px;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/mizuirostudio-image.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/mizuiro-image.jpg);
   background-position: center center;
   background-size: cover;
 
@@ -84,6 +87,7 @@ li {
     text-align: center;
     color: #fff;
     font-weight: 500;
+    font-size: 2rem;
   }
 }
 
@@ -109,42 +113,82 @@ li {
 .logo-white {
   position: absolute;
   z-index: 1;
-  top: 12px;
-  left: 12px;
-  width: 24px;
+  top: 0;
+  left: 0;
+  width: 48px;
   height: auto;
 }
 
-/* トップページ */
-.split-left {
-  height: 100svh;
-  width: 100svw;
-  pointer-events: none;
+.header-nav {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: auto;
 }
 
-@media screen and (max-width: 767px) {
-  .split-center {
-    display: none;
-  }
+.header-nav-links {
+  display: flex;
+  padding: 8px 20px;
 }
 
+.header-nav-item {
+  letter-spacing: 0.1em;
+  padding: 8px 10px;
+
+  a {
+    position: relative;
+    
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      opacity: 0.5;
+      left: 0;
+      bottom: -1px;
+      transform: scale(0, 1);
+      transform-origin: center top;
+      transition: transform 0.3s;
+    }
+
+    @media(hover: hover) {
+      &:hover::after {
+        transform: scale(1, 1);
+      }
+    }
+
+    @media(hover: none) {
+      &:active::after {
+        transform: scale(1, 1);
+      }
+    }   
+  }  
+}
+
+/* ファーストビュー */
 .top-image {
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(-45deg, rgba(67, 134, 198, 0.2),rgba(255, 255, 255, 0.2), rgba(74, 75, 158, 0.2)), url(images/mizuirostudio-image.jpg);
+  height: 80svh;
+  width: 100svw;
+  background-image: url(images/mizuiro-image.jpg);
   background-size: cover;
   background-position: center center;
   position: relative;
   pointer-events: none;
+  display: grid;
+  place-items: center;
+
+  .catchcopy {
+    width: 95%;
+    max-width: 700px;
+    position: absolute;
+  }
 
   span {
-    position: absolute;
+    display: block;
 
     &:nth-of-type(1) {
-      top: 46%;
-      right: 0;
-      margin-right: 8px;
-      padding-left: 16px;
       font-size: 2rem;
       font-weight: 500;
       letter-spacing: 0.1em;
@@ -153,70 +197,25 @@ li {
     }
 
     &:nth-of-type(2) {
-      top: 53%;
-      right: 0;
-      background-color: #fff;
       font-size: 1.4rem;
       letter-spacing: 0.1em;
-      padding: 4px 8px;
+      border-bottom: dotted 1px #fff;
     }
   }
 }
 
-.header-nav {
-  background-color: var(--red);
-  color: #fff;
-  position: absolute;
-  top: 20%;
-  right: 0;
-  pointer-events: auto;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-nav-links {
-  padding: 8px 20px;
+.top-wrapper {
+  background-color: var(--bg-color);
 }
 
-.header-nav-item {
-  font-size: 1.2rem;
-  padding: 4px;
-}
-
-
-@media screen and (min-width: 768px) {
-  .split-left {
-    width: 60%;
-    height: 100%;
-    position: fixed;
-  }
-
-  .split-center {
-    width: 60px;
-    height: 100%;
-    margin-left: 60%;
-    background-color: #fff;
-    position: fixed;
-
-    span {
-      font-size: 4.8rem;
-      display: block;
-      transform: rotate(90deg);
-      color: var(--bg-color);
-      white-space: nowrap;
-    }
-  }
-
-  .split-right {
-    width: calc(40% - 60px);
-    margin-left: calc(60% + 60px);
-    height: 100%;
-  }
-}
-
-#top {
-  background-image: url(images/logo-white.svg);
-  background-size: 60%;
-  background-position: top right;
-
+#about {
   h2 {
     font-size: 2rem;
     font-weight: 600;
@@ -233,49 +232,86 @@ li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin-top: 12px;
+    margin-top: 32px;
+    counter-reset: listnum;
   }
 
   .pr-point {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     font-size: 1rem;
     font-weight: 600;
     width: 140px;
-    height: 171px;
-    background-color: #fff;
-    border-radius: 16px;
-    margin: 4px;
+    height: 220px;
     padding: 16px;
+    position: relative;
+
+    &:nth-of-type(even) {
+      justify-content: flex-end;
+
+      @media screen and (max-width: 361px) {
+        justify-content: flex-start;        
+      }
+    }      
+
+    &::before {
+      display: block;
+      counter-increment: listnum;
+      content: counter(listnum, decimal-leading-zero);
+      font-size: 4.8rem;
+      position: absolute;
+      top: -16px;
+      left: 8px;
+      color: var(--main-color);
+      opacity: 0.3;
+      font-family: "natura";
+      font-weight: 400;
+    }
+
+    @media screen and (min-width: 362px) {
+      &:nth-of-type(even)::before {
+        top: 16px;
+      }     
+    }
   }
 
-  .pr-point::before {
+  .pr-icon {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .pr-icon::before {
     content: "";
     display: block;
+    position: absolute;
     background-position: center center;
-    margin-bottom: 8px;
-    background-size: contain;
-    width: 70px;
-    height: 70px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 48px;
+    width: 48px;
+    background-image: contain;
+    opacity: 0.9;
   }
 
-  .pr-point:nth-of-type(1)::before {
+  .icon-sp::before {
     background-image: url(images/icon-sp.svg);
   }
 
-  .pr-point:nth-of-type(2)::before {
+  .icon-film::before {
     background-image: url(images/icon-film.svg);
   }
 
-  .pr-point:nth-of-type(3)::before {
+  .icon-code::before {
     background-image: url(images/icon-code.svg);
   }
 
-  .pr-point:nth-of-type(4)::before {
-    background-image: url(images/icon-message.svg);
+  .icon-pen::before {
+    background-image: url(images/icon-pen.svg);
   }
 }
 
@@ -283,6 +319,7 @@ li {
 #works {
   text-align: center;
   background-color: #fff;
+  margin-top: 24px;
 
   h2 {
     font-size: 4.8rem;
@@ -309,10 +346,16 @@ li {
   label {
     display: inline-block;
     margin-top: 32px;
+    color: var(--main-color);
+    font-size: 1.2rem;
   }
 
   input, textarea {
     width: 100%;   
+  }
+
+  .btn-color {
+    margin-top: 24px;
   }
 }
 
@@ -320,14 +363,14 @@ li {
   background-color: #fff;
   border-radius: 16px;
   padding: 16px;
-  margin-top: 8px;
+  margin-top: 4px;
   min-height: 4.8rem;
 }
 
 /* フッター */
 .footer-nav-links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding-bottom: 8px;
   font-size: 1.2rem;
   font-weight: 500;
@@ -337,6 +380,42 @@ li {
 .footer-nav-item {
   padding: 8px;
 }
+
+/* 下層ページ */
+#confirm {
+  dl {
+    padding: 16px;
+  
+    dt {
+      text-align: center;
+      padding: 4px;
+      margin-top: 4px;
+    }
+  
+    .inputfield {
+      background-color: var(--bg-color);
+    }
+  }
+
+  form {
+    text-align: center;
+  }
+}
+
+#thanks {
+  text-align: center;
+  
+  p {
+    margin-top: 16px;
+  }
+
+  .btn-color {
+    margin-top: 16px;
+  }
+
+}
+
+
 
 
 
