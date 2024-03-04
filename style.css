@@ -79,7 +79,7 @@ li {
   display: grid;
   place-items: center;
   gap: 8px;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/mizuiro-image.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/mizuiro-image.webp);
   background-position: center center;
   background-size: cover;
 
@@ -169,9 +169,9 @@ li {
 
 /* ファーストビュー */
 .top-image {
-  height: 80svh;
+  height: 84svh;
   width: 100svw;
-  background-image: url(images/mizuiro-image.jpg);
+  background-image: url(images/mizuiro-image.webp);
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -261,7 +261,7 @@ li {
       content: counter(listnum, decimal-leading-zero);
       font-size: 4.8rem;
       position: absolute;
-      top: -16px;
+      top: -20px;
       left: 8px;
       color: var(--main-color);
       opacity: 0.3;
@@ -271,7 +271,7 @@ li {
 
     @media screen and (min-width: 362px) {
       &:nth-of-type(even)::before {
-        top: 16px;
+        top: 10px;
       }     
     }
 
@@ -406,7 +406,7 @@ li {
   }
 }
 
-#thanks {
+#thanks, #not-found {
   text-align: center;
   
   p {
@@ -417,6 +417,13 @@ li {
     margin-top: 16px;
   }
 }
+
+#privacy-policy {
+  h2 {
+    margin-top: 24px;
+  }
+}
+
 
 
 
