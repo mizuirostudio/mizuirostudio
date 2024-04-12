@@ -79,7 +79,8 @@ li {
   display: grid;
   place-items: center;
   gap: 8px;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/mizuiro-image.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(images/mizuiro-image.webp);
   background-position: center center;
   background-size: cover;
 
@@ -96,13 +97,13 @@ li {
   height: 48px;
   position: relative;
 
-  @media(hover: hover) {
+  @media (hover: hover) {
     &:hover {
       opacity: 0.5;
       transition: 0.3s;
     }
   }
-  @media(hover: none) {
+  @media (hover: none) {
     &:active {
       opacity: 0.5;
       transition: 0.3s;
@@ -138,7 +139,7 @@ li {
 
   a {
     position: relative;
-    
+
     &::after {
       position: absolute;
       content: "";
@@ -153,18 +154,18 @@ li {
       transition: transform 0.3s;
     }
 
-    @media(hover: hover) {
+    @media (hover: hover) {
       &:hover::after {
         transform: scale(1, 1);
       }
     }
 
-    @media(hover: none) {
+    @media (hover: none) {
       &:active::after {
         transform: scale(1, 1);
       }
-    }   
-  }  
+    }
+  }
 }
 
 /* ファーストビュー */
@@ -251,9 +252,9 @@ li {
       justify-content: flex-end;
 
       @media screen and (max-width: 361px) {
-        justify-content: flex-start;        
+        justify-content: flex-start;
       }
-    }      
+    }
 
     &::before {
       display: block;
@@ -272,7 +273,7 @@ li {
     @media screen and (min-width: 362px) {
       &:nth-of-type(even)::before {
         top: 10px;
-      }     
+      }
     }
 
     span {
@@ -354,8 +355,9 @@ li {
     font-size: 1.2rem;
   }
 
-  input, textarea {
-    width: 100%;   
+  input,
+  textarea {
+    width: 100%;
   }
 
   .btn-color {
@@ -389,13 +391,13 @@ li {
 #confirm {
   dl {
     padding: 16px;
-  
+
     dt {
       text-align: center;
       padding: 4px;
       margin-top: 4px;
     }
-  
+
     .inputfield {
       background-color: var(--bg-color);
     }
@@ -406,9 +408,10 @@ li {
   }
 }
 
-#thanks, #not-found {
+#thanks,
+#not-found {
   text-align: center;
-  
+
   p {
     margin-top: 16px;
   }
@@ -423,10 +426,3 @@ li {
     margin-top: 24px;
   }
 }
-
-
-
-
-
-
-
